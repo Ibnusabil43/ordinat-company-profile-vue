@@ -124,14 +124,4 @@ This is a company website. For contributions or suggestions, please contact the 
 
 © 2026 Ordinat Cakrawala. All rights reserved.
 
-## 📞 Contact
-
-**Ordinat Cakrawala**
-- 🌐 Website: [ordinat-cakrawala.com](https://ordinat-cakrawala.com)
-- 📧 Email: info@ordinat-cakrawala.com
-- 📱 Phone: +62 xxx xxxx xxxx
-- 📍 Location: Cirebon, Indonesia
-
----
-
 Built with ❤️ using Vue 3 & TypeScript
