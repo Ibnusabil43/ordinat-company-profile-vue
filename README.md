@@ -27,44 +27,6 @@ This is the official company profile website built with modern web technologies 
 - 🤝 Partner showcase (95+ clients)
 - 📞 Contact information
 
-## 📦 Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/Ibnusabil43/ordinat-company-profile-vue.git
-
-# Navigate to project directory
-cd ordinat-company-profile-vue
-
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-```
-
-## 🛠️ Available Scripts
-
-```bash
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Type check
-npm run type-check
-
-# Lint code
-npm run lint
-
-# Format code
-npm run format
-```
-
 ## 📁 Project Structure
 
 ```
