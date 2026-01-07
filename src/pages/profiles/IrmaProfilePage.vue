@@ -8,7 +8,7 @@ import irmaPhoto from '@/assets/IrmaRosdiyantiPhotos/IrmaRosdiyanti.jpeg'
     <!-- Hero Header with Large Photo -->
     <section class="bg-gradient-to-br from-blue-600 to-purple-600 text-white py-12 sm:py-16 lg:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div class="grid lg:grid-cols-2 gap-4 lg:gap-6 items-center">
           <!-- Photo Section -->
           <div class="order-1 lg:order-1 flex justify-center lg:justify-start">
             <div class="relative">
@@ -29,8 +29,8 @@ import irmaPhoto from '@/assets/IrmaRosdiyantiPhotos/IrmaRosdiyanti.jpeg'
               </svg>
               <span class="text-sm font-semibold">Psikolog Klinis Bersertifikat</span>
             </div>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 lg:mb-6">
-              Irma Rosdiyanti,<br class="hidden sm:block"/>S.Psi., Psikolog
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 lg:mb-6">
+              Irma Rosdiyanti, S.Psi., Psikolog
             </h1>
             <p class="text-xl sm:text-2xl text-blue-100 mb-6 lg:mb-8">
               Pendiri & Lead Psychologist
