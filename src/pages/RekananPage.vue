@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
-import doc1 from '@/assets/documentation/doc1.jpg'
-import doc2 from '@/assets/documentation/doc2.jpg'
-import doc3 from '@/assets/documentation/doc3.jpg'
-import doc4 from '@/assets/documentation/doc4.jpg'
-import doc5 from '@/assets/documentation/doc5.jpg'
-import doc6 from '@/assets/documentation/doc6.jpg'
-import doc7 from '@/assets/documentation/doc7.jpg'
-import doc8 from '@/assets/documentation/doc8.jpg'
-import doc9 from '@/assets/documentation/doc9.jpg'
+import doc1 from '@/assets/Documentation/doc1.jpg'
+import doc2 from '@/assets/Documentation/doc2.jpg'
+import doc3 from '@/assets/Documentation/doc3.jpg'
+import doc4 from '@/assets/Documentation/doc4.jpg'
+import doc5 from '@/assets/Documentation/doc5.jpg'
+import doc6 from '@/assets/Documentation/doc6.jpg'
+import doc7 from '@/assets/Documentation/doc7.jpg'
+import doc8 from '@/assets/Documentation/doc8.jpg'
+import doc9 from '@/assets/Documentation/doc9.jpg'
 
 interface Category {
   icon: string
