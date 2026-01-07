@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, type RouterScrollBehavior } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -74,7 +74,7 @@ const router = createRouter({
       component: () => import('@/pages/KontakPage.vue')
     }
   ],
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior: ((to, from, savedPosition) => {
     if (savedPosition) {
       return savedPosition
     } else if (to.hash) {
@@ -85,7 +85,7 @@ const router = createRouter({
     } else {
       return { top: 0, behavior: 'smooth' }
     }
-  }
+  }) as RouterScrollBehavior
 })
 
 export default router
