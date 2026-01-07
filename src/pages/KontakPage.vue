@@ -226,14 +226,12 @@ const handleSubmit = () => {
       </div>
     </section>
 
-    <!-- Closing Message -->
-    <section class="py-12 sm:py-16 bg-white">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-6 sm:p-8 lg:p-12 text-white text-center">
-          <p class="text-base lg:text-lg leading-relaxed max-w-4xl mx-auto">
-            Untuk informasi lebih lanjut mengenai psikotes sekolah, asesmen karyawan, program CPMI, maupun kebutuhan konsultasi lainnya, silakan hubungi kami. Tim Ordinat Cakrawala siap membantu merancang solusi psikologi yang paling sesuai bagi lembaga Anda.
-          </p>
-        </div>
+    <!-- CTA -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-base sm:text-lg lg:text-xl leading-relaxed max-w-4xl mx-auto">
+          Untuk informasi lebih lanjut mengenai psikotes sekolah, asesmen karyawan, program CPMI, maupun kebutuhan konsultasi lainnya, silakan hubungi kami. Tim Ordinat Cakrawala siap membantu merancang solusi psikologi yang paling sesuai bagi lembaga Anda.
+        </p>
       </div>
     </section>
   </DefaultLayout>
