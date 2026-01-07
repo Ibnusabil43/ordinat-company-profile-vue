@@ -1,4 +1,4 @@
-r<script setup lang="ts">
+<script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useNavbar, useMobileMenu } from '@/composables/useNavbar'
 import { useRoute } from 'vue-router'
