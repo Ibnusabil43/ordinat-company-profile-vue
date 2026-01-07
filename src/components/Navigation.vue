@@ -1,7 +1,7 @@
-<script setup lang="ts">
+r<script setup lang="ts">
+import { ref, watch } from 'vue'
 import { useNavbar, useMobileMenu } from '@/composables/useNavbar'
 import { useRoute } from 'vue-router'
-import { watch } from 'vue'
 import logoImg from '@/assets/4d225eb20f2775c6ef864b06d8b5441eb4e805f8.png'
 
 const route = useRoute()
@@ -208,7 +208,7 @@ watch(() => route.path, () => {
           @click="toggleMenu"
           class="lg:hidden p-2 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors tap-target"
           aria-label="Toggle menu"
-          aria-expanded="mobileMenuOpen"
+          :aria-expanded="mobileMenuOpen"
         >
           <svg 
             v-if="!mobileMenuOpen" 

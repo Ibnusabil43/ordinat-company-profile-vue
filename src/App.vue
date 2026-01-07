@@ -6,7 +6,7 @@ import { RouterView } from 'vue-router'
   <div class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50/30">
     <RouterView v-slot="{ Component, route }">
       <transition
-        :name="route.meta.transition || 'fade-slide'"
+        :name="(route.meta.transition as string) || 'fade-slide'"
         mode="out-in"
         @before-enter="onBeforeEnter"
         @after-leave="onAfterLeave"

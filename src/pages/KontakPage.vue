@@ -115,7 +115,7 @@ const handleSubmit = () => {
               width="100%"
               height="100%"
               style="border:0; min-height: 400px;"
-              allowfullscreen=""
+              allowfullscreen
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               class="w-full h-full"
