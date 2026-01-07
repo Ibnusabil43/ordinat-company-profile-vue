@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
+import irmaPhoto from '@/assets/IrmaRosdiyantiPhotos/IrmaRosdiyanti.jpeg'
 
 const teamMembers = [
   { name: 'Nazilatul F., S.Psi.', photo: new URL('@/assets/TeamPhotos/Nazilatul F., S.Psi..jpeg', import.meta.url).href },
@@ -46,11 +47,11 @@ const teamMembers = [
           class="block bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-6 sm:p-8 lg:p-12 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1"
         >
           <div class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
-            <div class="w-20 h-20 lg:w-24 lg:h-24 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-10 h-10 lg:w-12 lg:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-              </svg>
-            </div>
+            <img 
+              :src="irmaPhoto" 
+              alt="Irma Rosdiyanti, S.Psi., Psikolog" 
+              class="w-20 h-20 lg:w-24 lg:h-24 rounded-2xl object-cover flex-shrink-0 ring-4 ring-white/20"
+            />
             <div class="flex-1 text-center md:text-left">
               <h3 class="text-2xl lg:text-3xl font-bold mb-2">Irma Rosdiyanti, S.Psi., Psikolog</h3>
               <p class="text-blue-100 text-base lg:text-lg mb-4">Psikolog Klinis</p>

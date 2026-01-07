@@ -1,21 +1,54 @@
 <script setup lang="ts">
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
+import irmaPhoto from '@/assets/IrmaRosdiyantiPhotos/IrmaRosdiyanti.jpeg'
 </script>
 
 <template>
   <DefaultLayout>
-    <!-- Hero Header -->
-    <section class="bg-gradient-to-br from-blue-600 to-purple-600 text-white py-12 sm:py-16">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center gap-4 mb-4 lg:mb-6">
-          <div class="w-14 h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
-            <svg class="w-7 h-7 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-            </svg>
+    <!-- Hero Header with Large Photo -->
+    <section class="bg-gradient-to-br from-blue-600 to-purple-600 text-white py-12 sm:py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <!-- Photo Section -->
+          <div class="order-1 lg:order-1 flex justify-center lg:justify-start">
+            <div class="relative">
+              <div class="absolute inset-0 bg-white/20 rounded-3xl blur-2xl transform translate-x-4 translate-y-4"></div>
+              <img 
+                :src="irmaPhoto" 
+                alt="Irma Rosdiyanti, S.Psi., Psikolog" 
+                class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl object-cover shadow-2xl ring-4 ring-white/20"
+              />
+            </div>
           </div>
-          <div>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Irma Rosdiyanti, S.Psi., Psikolog</h1>
-            <p class="text-lg sm:text-xl text-blue-100 mt-2">Pendiri & Lead Psychologist</p>
+
+          <!-- Text Section -->
+          <div class="order-2 lg:order-2 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4 lg:mb-6">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+              <span class="text-sm font-semibold">Psikolog Klinis Bersertifikat</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 lg:mb-6">
+              Irma Rosdiyanti,<br class="hidden sm:block"/>S.Psi., Psikolog
+            </h1>
+            <p class="text-xl sm:text-2xl text-blue-100 mb-6 lg:mb-8">
+              Pendiri & Lead Psychologist
+            </p>
+            <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+              <div class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg">
+                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-sm font-medium">25+ Tahun Pengalaman</span>
+              </div>
+              <div class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg">
+                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span class="text-sm font-medium">Terdaftar HIMPSI</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -25,10 +58,18 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue'
     <section class="py-12 sm:py-16 lg:py-20 bg-white">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 sm:p-8 lg:p-12 shadow-lg">
-          <p class="text-sm lg:text-base text-gray-700 leading-relaxed mb-6">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">Tentang</h2>
+          </div>
+          <p class="text-base lg:text-lg text-gray-700 leading-relaxed mb-6">
             Irma Rosdiyanti adalah psikolog klinis yang telah berpengalaman lebih dari 25 tahun dalam bidang psikologi klinis, industri-organisasi, dan pendidikan. Sebagai pendiri Ordinat Cakrawala, beliau memimpin tim psikolog profesional yang melayani kebutuhan asesmen, konseling, dan pengembangan SDM di berbagai sektor.
           </p>
-          <p class="text-sm lg:text-base text-gray-700 leading-relaxed">
+          <p class="text-base lg:text-lg text-gray-700 leading-relaxed">
             Dengan latar belakang akademis yang kuat dan sertifikasi profesi yang lengkap, Irma berkomitmen untuk memberikan layanan psikologi yang berkualitas, etis, dan berdampak nyata bagi klien—baik individu, keluarga, maupun organisasi.
           </p>
         </div>
