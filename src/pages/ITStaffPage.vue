@@ -5,23 +5,27 @@ interface Member {
   name: string
   title: string
   bio: string
+  photo: string | null
 }
 
 const members: Member[] = [
   {
     name: 'Zaidan Ibnusabil, S.Kom.',
     title: 'IT Staff – System & Platform Developer',
-    bio: 'Bertanggung jawab dalam perancangan dan pengembangan sistem informasi asesmen psikologi, pengelolaan database hasil tes, serta integrasi layanan psikotes online agar mudah digunakan oleh sekolah, perusahaan, dan CPMI. Memiliki latar belakang rekayasa perangkat lunak dan pengalaman membangun aplikasi berbasis web dan mobile.'
+    bio: 'Bertanggung jawab dalam perancangan dan pengembangan sistem informasi asesmen psikologi, pengelolaan database hasil tes, serta integrasi layanan psikotes online agar mudah digunakan oleh sekolah, perusahaan, dan CPMI. Memiliki latar belakang rekayasa perangkat lunak dan pengalaman membangun aplikasi berbasis web dan mobile.',
+    photo: new URL('@/assets/ITTeamPhotos/Zaidan Ibnusabil, S.Kom..jpg', import.meta.url).href
   },
   {
     name: 'Abdullah Iman, S.Kom.',
     title: 'IT Staff – Infrastructure & Technical Support',
-    bio: 'Berperan dalam pengelolaan infrastruktur IT, keamanan data, dan memastikan proses pelaksanaan psikotes online maupun offline berjalan lancar. Mendukung tim psikolog dalam penyediaan perangkat, troubleshooting teknis, serta optimasi sistem yang digunakan klien.'
+    bio: 'Berperan dalam pengelolaan infrastruktur IT, keamanan data, dan memastikan proses pelaksanaan psikotes online maupun offline berjalan lancar. Mendukung tim psikolog dalam penyediaan perangkat, troubleshooting teknis, serta optimasi sistem yang digunakan klien.',
+    photo: new URL('@/assets/ITTeamPhotos/Abdullah Iman, S.Kom..jpeg', import.meta.url).href
   },
   {
     name: 'Daffa A., S.Si.',
     title: 'IT Staff – Data & System Support',
-    bio: 'Mendukung pengelolaan data dan sistem informasi asesmen psikologi. Membantu dalam pengolahan hasil tes, administrasi database, serta koordinasi teknis untuk memastikan kelancaran operasional sistem psikotes online dan offline.'
+    bio: 'Mendukung pengelolaan data dan sistem informasi asesmen psikologi. Membantu dalam pengolahan hasil tes, administrasi database, serta koordinasi teknis untuk memastikan kelancaran operasional sistem psikotes online dan offline.',
+    photo: null
   }
 ]
 
@@ -71,7 +75,10 @@ const getInitial = (name: string): string => {
 
         <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
           <div v-for="(member, index) in members" :key="index" class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 lg:p-8 shadow-lg">
-            <div class="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6">
+            <div v-if="member.photo" class="w-24 h-24 lg:w-28 lg:h-28 mx-auto mb-4 lg:mb-6 overflow-hidden rounded-full">
+              <img :src="member.photo" :alt="member.name" class="w-full h-full object-cover object-[center_20%]" />
+            </div>
+            <div v-else class="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6">
               <span class="text-white text-2xl lg:text-3xl font-bold">{{ getInitial(member.name) }}</span>
             </div>
             <h3 class="text-lg lg:text-xl font-bold text-gray-900 text-center mb-2">{{ member.name }}</h3>

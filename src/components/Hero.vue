@@ -72,7 +72,7 @@ const badges = [
               </div>
               <div class="grid grid-cols-2 gap-4">
                 <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default">
-                  <div class="text-3xl font-bold text-blue-600 mb-1">1997</div>
+                  <div class="text-3xl font-bold text-blue-600 mb-1">2006</div>
                   <div class="text-sm text-gray-600 font-medium">Sejak</div>
                 </div>
                 <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default">

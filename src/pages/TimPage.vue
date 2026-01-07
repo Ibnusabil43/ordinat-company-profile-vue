@@ -2,14 +2,14 @@
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 
 const teamMembers = [
-  'Nazilatul F., S.Psi.',
-  'Tanthie Eka, S.Psi.',
-  'Hamimah, S.Psi.',
-  'Dimas A., S.Psi.',
-  'Noviyanto M., S.Psi.',
-  'Julianto R., S.Psi.',
-  'Afrian A., S.Psi.',
-  'Nisya N., S.Psi.'
+  { name: 'Nazilatul F., S.Psi.', photo: new URL('@/assets/TeamPhotos/Nazilatul F., S.Psi..jpeg', import.meta.url).href },
+  { name: 'Tanthie Eka, S.Psi.', photo: new URL('@/assets/TeamPhotos/Tanthie Eka, S.Psi..jpeg', import.meta.url).href },
+  { name: 'Hamimah, S.Psi.', photo: new URL('@/assets/TeamPhotos/Hamimah, S.Psi..jpeg', import.meta.url).href },
+  { name: 'Dimas A., S.Psi.', photo: null },
+  { name: 'Noviyanto M., S.Psi.', photo: new URL('@/assets/TeamPhotos/Noviyanto M., S.Psi..jpeg', import.meta.url).href },
+  { name: 'Julianto R., S.Psi.', photo: null },
+  { name: 'Afrian A., S.Psi.', photo: new URL('@/assets/TeamPhotos/Afrian A., S.Psi..jpeg', import.meta.url).href },
+  { name: 'Nisya N., S.Psi.', photo: new URL('@/assets/TeamPhotos/Nisya N., S.Psi..jpeg', import.meta.url).href }
 ]
 </script>
 
@@ -87,10 +87,13 @@ const teamMembers = [
             :key="index"
             class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
           >
-            <div class="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg lg:text-xl">
-              {{ member.charAt(0) }}
+            <div v-if="member.photo" class="w-20 h-20 lg:w-24 lg:h-24 mx-auto mb-4 overflow-hidden rounded-full">
+              <img :src="member.photo" :alt="member.name" class="w-full h-full object-cover" />
             </div>
-            <p class="font-semibold text-gray-900 text-sm lg:text-base">{{ member }}</p>
+            <div v-else class="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg lg:text-xl">
+              {{ member.name.charAt(0) }}
+            </div>
+            <p class="font-semibold text-gray-900 text-sm lg:text-base">{{ member.name }}</p>
             <p class="text-xs lg:text-sm text-gray-600 mt-1">Psikolog / Asisten Psikolog</p>
           </div>
         </div>
