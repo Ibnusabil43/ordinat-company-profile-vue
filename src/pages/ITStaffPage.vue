@@ -25,7 +25,7 @@ const members: Member[] = [
     name: 'Daffa A., S.Si.',
     title: 'IT Staff – Data & System Support',
     bio: 'Mendukung pengelolaan data dan sistem informasi asesmen psikologi. Membantu dalam pengolahan hasil tes, administrasi database, serta koordinasi teknis untuk memastikan kelancaran operasional sistem psikotes online dan offline.',
-    photo: null
+    photo: new URL('@/assets/ITTeamPhotos/Daffa A., S.Si..jpeg', import.meta.url).href
   }
 ]
 
