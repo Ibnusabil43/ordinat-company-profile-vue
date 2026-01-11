@@ -73,7 +73,7 @@ import irmaPhoto from '@/assets/IrmaRosdiyantiPhotos/IrmaRosdiyanti.jpeg';
             yang melayani kebutuhan asesmen, konseling, dan pengembangan SDM di berbagai sektor.
           </p>
           <p class="text-base lg:text-lg text-gray-700 leading-relaxed">
-            Dengan latar belakang akademis yang kuat dan sertifikasi profesi yang lengkap, Irma berkomitmen untuk memberikan layanan psikologi yang berkualitas, etis, dan berdampak nyata bagi klien—baik individu, keluarga, maupun
+            Dengan latar belakang akademis yang kuat dan sertifikasi profesi yang lengkap, Irma berkomitmen untuk memberikan layanan psikologi yang berkualitas, etis, dan berdampak nyata bagi klien, baik individu, keluarga, maupun
             organisasi.
           </p>
         </div>
@@ -222,7 +222,7 @@ import irmaPhoto from '@/assets/IrmaRosdiyantiPhotos/IrmaRosdiyanti.jpeg';
     <!-- Services Offered -->
     <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-blue-50/30">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-12">
+        <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-12 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
           <div class="flex items-center gap-4 mb-8">
             <div class="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center">
               <svg class="w-7 h-7 lg:w-8 lg:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
