@@ -77,8 +77,8 @@ const programs: Program[] = [
         <div class="text-center mb-8 lg:mb-12">
           <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Mengapa Pelatihan SDM Penting?</h2>
           <p class="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
-            Di era yang terus berkembang, investasi pada pengembangan karyawan adalah kunci keberhasilan jangka panjang organisasi. Pelatihan yang tepat akan meningkatkan produktivitas, menurunkan turnover, dan menciptakan budaya kerja yang
-            positif.
+            Di tengah dinamika perubahan yang semakin cepat, pengembangan kompetensi karyawan menjadi faktor strategis bagi keberlangsungan dan pertumbuhan organisasi. Program pelatihan yang dirancang secara tepat membantu meningkatkan
+            kinerja dan produktivitas, mengurangi tingkat turnover, serta membangun budaya kerja yang sehat, adaptif, dan berkelanjutan.
           </p>
         </div>
 

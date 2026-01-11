@@ -36,9 +36,17 @@ const fokus = [
     <section class="py-12 sm:py-16 lg:py-20 bg-white">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="space-y-4 lg:space-y-6 text-gray-700 leading-relaxed text-base lg:text-lg">
-          <p>Dimensi Cakrawala merupakan unit khusus yang berfokus pada pemeriksaan psikologi bagi Calon Pekerja Migran Indonesia. Layanan ini mendukung proses seleksi dan kesiapan mental CPMI sebelum berangkat bekerja ke luar negeri.</p>
           <p>
-            Dengan pengalaman menangani pemeriksaan psikologi untuk tenaga kerja Indonesia, Dimensi Cakrawala memastikan bahwa setiap peserta tidak hanya lolos secara administratif, tetapi juga lebih siap secara emosional dan psikologis.
+            Dimensi Cakrawala adalah unit profesional yang fokus pada layanan psikologi bagi Calon Pekerja Migran Indonesia (CPMI). Kami menyediakan asesmen psikologi komprehensif untuk memastikan kesiapan mental, emosional, dan psikologis
+            CPMI sebelum berangkat bekerja ke luar negeri.
+          </p>
+          <p>
+            Dengan menggunakan metode dan alat tes psikologi yang terstandarisasi, kami membantu lembaga penempatan tenaga kerja maupun individu dalam proses seleksi yang objektif, akurat, dan sesuai standar BNP2TKI serta persyaratan negara
+            tujuan.
+          </p>
+          <p>
+            Lebih dari sekadar proses administrasi, kami memastikan setiap CPMI siap menghadapi tantangan bekerja di luar negeri, baik secara mental maupun emosional. Layanan ini dirancang untuk melindungi CPMI dari risiko psikologis dan
+            meningkatkan peluang kesuksesan mereka di tempat kerja.
           </p>
         </div>
       </div>

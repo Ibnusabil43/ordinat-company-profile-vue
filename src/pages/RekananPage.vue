@@ -181,10 +181,16 @@ const totalClients = categories.reduce((sum, category) => sum + category.example
     <!-- Description -->
     <section class="py-12 sm:py-16 lg:py-20 bg-white">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-base lg:text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
-          Ordinat Cakrawala telah bekerja sama dengan puluhan sekolah menengah, madrasah, dan lembaga pendidikan di wilayah Cirebon, Indramayu, Kuningan, dan sekitarnya untuk penyelenggaraan psikotes klasikal, penjurusan, serta program
-          pengembangan siswa.
-        </p>
+        <div class="space-y-4 lg:space-y-6 text-gray-700 leading-relaxed text-base lg:text-lg max-w-4xl mx-auto">
+          <p>
+            Ordinat Cakrawala telah menjalin kerja sama dengan berbagai sekolah menengah, madrasah, serta lembaga pendidikan di wilayah Cirebon, Indramayu, Kuningan, dan sekitarnya. Kolaborasi ini mencakup pelaksanaan psikotes klasikal,
+            program penjurusan, serta berbagai kegiatan pengembangan potensi dan kesiapan siswa.
+          </p>
+          <p>
+            Melalui pendekatan psikologi yang terstruktur dan berbasis ilmiah, kami mendukung institusi pendidikan dalam membantu siswa mengenali potensi diri, merencanakan jalur pendidikan yang sesuai, serta mempersiapkan diri menghadapi
+            jenjang pendidikan dan tantangan masa depan.
+          </p>
+        </div>
       </div>
     </section>
 
