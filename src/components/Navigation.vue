@@ -36,15 +36,15 @@ watch(() => route.path, () => {
 </script>
 
 <template>
-  <nav ref="navbarEl" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md transition-shadow duration-300">
+  <nav ref="navbarEl" class="fixed top-0 left-0 right-0 z-50 bg-paper/95 backdrop-blur-md shadow-sm border-b border-paper-300 transition-shadow duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center py-3 sm:py-4">
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition-opacity tap-target">
           <img :src="logoImg" alt="Ordinat Cakrawala Logo" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover" />
           <div class="min-w-0">
-            <h1 class="font-bold text-base sm:text-lg text-gray-900 truncate">Ordinat Cakrawala</h1>
-            <p class="text-xs text-gray-600 hidden sm:block">Biro Konsultasi Psikologi</p>
+            <h1 class="font-bold text-base sm:text-lg text-ink truncate">Ordinat Cakrawala</h1>
+            <p class="text-xs text-ink-soft hidden sm:block">Biro Konsultasi Psikologi</p>
           </div>
         </RouterLink>
 
@@ -54,9 +54,9 @@ watch(() => route.path, () => {
             to="/"
             :class="[
               'px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200',
-              isActive('/') 
-                ? 'text-blue-600 bg-blue-50 shadow-sm' 
-                : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+              isActive('/')
+                ? 'text-primary-700 bg-primary-50 shadow-sm'
+                : 'text-ink hover:text-primary-700 hover:bg-primary-50'
             ]"
           >
             Beranda
@@ -66,9 +66,9 @@ watch(() => route.path, () => {
             to="/profil"
             :class="[
               'px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200',
-              isActive('/profil') 
-                ? 'text-blue-600 bg-blue-50 shadow-sm' 
-                : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+              isActive('/profil')
+                ? 'text-primary-700 bg-primary-50 shadow-sm'
+                : 'text-ink hover:text-primary-700 hover:bg-primary-50'
             ]"
           >
             Profil Perusahaan
@@ -80,8 +80,8 @@ watch(() => route.path, () => {
               :class="[
                 'px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 flex items-center gap-1',
                 isPathActive('/layanan') 
-                  ? 'text-blue-600 bg-blue-50 shadow-sm' 
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                  ? 'text-primary-700 bg-primary-50 shadow-sm' 
+                  : 'text-ink hover:text-primary-700 hover:bg-primary-50'
               ]"
             >
               Layanan
@@ -92,37 +92,37 @@ watch(() => route.path, () => {
             <div class="absolute left-0 mt-2 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 -translate-y-2">
               <RouterLink
                 to="/layanan"
-                class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 first:rounded-t-xl border-b border-gray-100 font-medium transition-colors"
+                class="block px-4 py-3 text-sm text-ink hover:bg-primary-50 hover:text-primary-700 first:rounded-t-xl border-b border-paper-300 font-medium transition-colors"
               >
                 Semua Layanan
               </RouterLink>
               <RouterLink
                 to="/layanan/psikotes-assessment"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                class="block px-4 py-2 text-sm text-ink hover:bg-primary-50 hover:text-primary-700 transition-colors"
               >
                 Psikotes & Assessment
               </RouterLink>
               <RouterLink
                 to="/layanan/psikologi-pendidikan"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                class="block px-4 py-2 text-sm text-ink hover:bg-primary-50 hover:text-primary-700 transition-colors"
               >
                 Psikologi Pendidikan
               </RouterLink>
               <RouterLink
                 to="/layanan/konseling"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                class="block px-4 py-2 text-sm text-ink hover:bg-primary-50 hover:text-primary-700 transition-colors"
               >
                 Konseling
               </RouterLink>
               <RouterLink
                 to="/layanan/training"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                class="block px-4 py-2 text-sm text-ink hover:bg-primary-50 hover:text-primary-700 transition-colors"
               >
                 Training & Capacity Building
               </RouterLink>
               <RouterLink
                 to="/layanan/outbound"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 last:rounded-b-xl transition-colors"
+                class="block px-4 py-2 text-sm text-ink hover:bg-primary-50 hover:text-primary-700 last:rounded-b-xl transition-colors"
               >
                 Outbound & Team Building
               </RouterLink>
@@ -134,8 +134,8 @@ watch(() => route.path, () => {
             :class="[
               'px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200',
               isActive('/cpmi') 
-                ? 'text-blue-600 bg-blue-50 shadow-sm' 
-                : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                ? 'text-primary-700 bg-primary-50 shadow-sm' 
+                : 'text-ink hover:text-primary-700 hover:bg-primary-50'
             ]"
           >
             Unit CPMI
@@ -147,8 +147,8 @@ watch(() => route.path, () => {
               :class="[
                 'px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 flex items-center gap-1',
                 isPathActive('/tim') 
-                  ? 'text-blue-600 bg-blue-50 shadow-sm' 
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                  ? 'text-primary-700 bg-primary-50 shadow-sm' 
+                  : 'text-ink hover:text-primary-700 hover:bg-primary-50'
               ]"
             >
               Tim
@@ -159,19 +159,19 @@ watch(() => route.path, () => {
             <div class="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 -translate-y-2">
               <RouterLink
                 to="/tim"
-                class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 first:rounded-t-xl border-b border-gray-100 font-medium transition-colors"
+                class="block px-4 py-3 text-sm text-ink hover:bg-primary-50 hover:text-primary-700 first:rounded-t-xl border-b border-paper-300 font-medium transition-colors"
               >
                 Tim Psikolog & IT Staff
               </RouterLink>
               <RouterLink
                 to="/tim/irma-rosdiyanti"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                class="block px-4 py-2 text-sm text-ink hover:bg-primary-50 hover:text-primary-700 transition-colors"
               >
                 Irma Rosdiyanti, S.Psi., Psikolog
               </RouterLink>
               <RouterLink
                 to="/tim/it-staff"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 last:rounded-b-xl transition-colors"
+                class="block px-4 py-2 text-sm text-ink hover:bg-primary-50 hover:text-primary-700 last:rounded-b-xl transition-colors"
               >
                 IT Staff & Sistem Informasi
               </RouterLink>
@@ -183,8 +183,8 @@ watch(() => route.path, () => {
             :class="[
               'px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200',
               isActive('/rekanan') 
-                ? 'text-blue-600 bg-blue-50 shadow-sm' 
-                : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                ? 'text-primary-700 bg-primary-50 shadow-sm' 
+                : 'text-ink hover:text-primary-700 hover:bg-primary-50'
             ]"
           >
             Rekanan
@@ -195,8 +195,8 @@ watch(() => route.path, () => {
             :class="[
               'px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200',
               isActive('/kontak') 
-                ? 'text-blue-600 bg-blue-50 shadow-sm' 
-                : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                ? 'text-primary-700 bg-primary-50 shadow-sm' 
+                : 'text-ink hover:text-primary-700 hover:bg-primary-50'
             ]"
           >
             Kontak
@@ -206,7 +206,7 @@ watch(() => route.path, () => {
         <!-- Mobile Menu Button -->
         <button
           @click="toggleMenu"
-          class="lg:hidden p-2 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors tap-target"
+          class="lg:hidden p-2 rounded-lg hover:bg-paper-200 active:bg-gray-200 transition-colors tap-target"
           aria-label="Toggle menu"
           :aria-expanded="mobileMenuOpen"
         >
@@ -252,8 +252,8 @@ watch(() => route.path, () => {
             :class="[
               'block px-4 py-3 rounded-lg transition-colors tap-target',
               isActive('/') 
-                ? 'bg-blue-50 text-blue-600 font-medium' 
-                : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                ? 'bg-primary-50 text-primary-700 font-medium' 
+                : 'text-ink hover:bg-primary-50 hover:text-primary-700'
             ]"
           >
             Beranda
@@ -265,8 +265,8 @@ watch(() => route.path, () => {
             :class="[
               'block px-4 py-3 rounded-lg transition-colors tap-target',
               isActive('/profil') 
-                ? 'bg-blue-50 text-blue-600 font-medium' 
-                : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                ? 'bg-primary-50 text-primary-700 font-medium' 
+                : 'text-ink hover:bg-primary-50 hover:text-primary-700'
             ]"
           >
             Profil Perusahaan
@@ -279,8 +279,8 @@ watch(() => route.path, () => {
               :class="[
                 'w-full flex items-center justify-between px-4 py-3 rounded-lg transition-colors tap-target',
                 isPathActive('/layanan') 
-                  ? 'bg-blue-50 text-blue-600 font-medium' 
-                  : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                  ? 'bg-primary-50 text-primary-700 font-medium' 
+                  : 'text-ink hover:bg-primary-50 hover:text-primary-700'
               ]"
             >
               Layanan
@@ -305,42 +305,42 @@ watch(() => route.path, () => {
                 <RouterLink
                   to="/layanan"
                   @click="handleMobileNavClick"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
+                  class="block px-4 py-2 text-sm text-ink hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors font-medium"
                 >
                   Semua Layanan
                 </RouterLink>
                 <RouterLink
                   to="/layanan/psikotes-assessment"
                   @click="handleMobileNavClick"
-                  class="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                  class="block px-4 py-2 text-sm text-ink-soft hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors"
                 >
                   Psikotes & Assessment
                 </RouterLink>
                 <RouterLink
                   to="/layanan/psikologi-pendidikan"
                   @click="handleMobileNavClick"
-                  class="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                  class="block px-4 py-2 text-sm text-ink-soft hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors"
                 >
                   Psikologi Pendidikan
                 </RouterLink>
                 <RouterLink
                   to="/layanan/konseling"
                   @click="handleMobileNavClick"
-                  class="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                  class="block px-4 py-2 text-sm text-ink-soft hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors"
                 >
                   Konseling
                 </RouterLink>
                 <RouterLink
                   to="/layanan/training"
                   @click="handleMobileNavClick"
-                  class="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                  class="block px-4 py-2 text-sm text-ink-soft hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors"
                 >
                   Training & Capacity Building
                 </RouterLink>
                 <RouterLink
                   to="/layanan/outbound"
                   @click="handleMobileNavClick"
-                  class="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                  class="block px-4 py-2 text-sm text-ink-soft hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors"
                 >
                   Outbound & Team Building
                 </RouterLink>
@@ -354,8 +354,8 @@ watch(() => route.path, () => {
             :class="[
               'block px-4 py-3 rounded-lg transition-colors tap-target',
               isActive('/cpmi') 
-                ? 'bg-blue-50 text-blue-600 font-medium' 
-                : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                ? 'bg-primary-50 text-primary-700 font-medium' 
+                : 'text-ink hover:bg-primary-50 hover:text-primary-700'
             ]"
           >
             Unit CPMI
@@ -368,8 +368,8 @@ watch(() => route.path, () => {
               :class="[
                 'w-full flex items-center justify-between px-4 py-3 rounded-lg transition-colors tap-target',
                 isPathActive('/tim') 
-                  ? 'bg-blue-50 text-blue-600 font-medium' 
-                  : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                  ? 'bg-primary-50 text-primary-700 font-medium' 
+                  : 'text-ink hover:bg-primary-50 hover:text-primary-700'
               ]"
             >
               Tim
@@ -394,21 +394,21 @@ watch(() => route.path, () => {
                 <RouterLink
                   to="/tim"
                   @click="handleMobileNavClick"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
+                  class="block px-4 py-2 text-sm text-ink hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors font-medium"
                 >
                   Tim Psikolog & IT Staff
                 </RouterLink>
                 <RouterLink
                   to="/tim/irma-rosdiyanti"
                   @click="handleMobileNavClick"
-                  class="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                  class="block px-4 py-2 text-sm text-ink-soft hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors"
                 >
                   Irma Rosdiyanti, S.Psi., Psikolog
                 </RouterLink>
                 <RouterLink
                   to="/tim/it-staff"
                   @click="handleMobileNavClick"
-                  class="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                  class="block px-4 py-2 text-sm text-ink-soft hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors"
                 >
                   IT Staff & Sistem Informasi
                 </RouterLink>
@@ -422,8 +422,8 @@ watch(() => route.path, () => {
             :class="[
               'block px-4 py-3 rounded-lg transition-colors tap-target',
               isActive('/rekanan') 
-                ? 'bg-blue-50 text-blue-600 font-medium' 
-                : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                ? 'bg-primary-50 text-primary-700 font-medium' 
+                : 'text-ink hover:bg-primary-50 hover:text-primary-700'
             ]"
           >
             Rekanan
@@ -435,8 +435,8 @@ watch(() => route.path, () => {
             :class="[
               'block px-4 py-3 rounded-lg transition-colors tap-target',
               isActive('/kontak') 
-                ? 'bg-blue-50 text-blue-600 font-medium' 
-                : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                ? 'bg-primary-50 text-primary-700 font-medium' 
+                : 'text-ink hover:bg-primary-50 hover:text-primary-700'
             ]"
           >
             Kontak

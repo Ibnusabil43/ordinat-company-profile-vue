@@ -18,7 +18,7 @@ interface Package {
 
 const groups: TestGroup[] = [
   {
-    icon: 'brain',
+    icon: 'mind',
     title: 'Tes Inteligensi (IQ)',
     description: 'Tes untuk mengukur tingkat kecerdasan anak dalam berbagai aspek kognitif, seperti kemampuan verbal, numerik, dan spasial. Hasil tes IQ memberikan gambaran potensi akademik siswa.',
     items: [
@@ -32,7 +32,7 @@ const groups: TestGroup[] = [
     ]
   },
   {
-    icon: 'lightbulb',
+    icon: 'idea',
     title: 'Tes Gaya Belajar',
     description: 'Mengidentifikasi metode belajar yang paling cocok bagi setiap siswa, sehingga proses pembelajaran menjadi lebih efektif dan menyenangkan.',
     items: [
@@ -42,7 +42,7 @@ const groups: TestGroup[] = [
     ]
   },
   {
-    icon: 'palette',
+    icon: 'compass',
     title: 'Tes Bakat & Minat',
     description: 'Menggali potensi bakat dan area minat siswa untuk membantu pengarahan jurusan, pilihan studi lanjut, hingga proyeksi karier di masa depan.',
     items: [
@@ -96,25 +96,19 @@ const packages: Package[] = [
   }
 ]
 
-const iconPaths: Record<string, string> = {
-  brain: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
-  lightbulb: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
-  palette: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01',
-  heart: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
-  target: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-}
 </script>
 
 <template>
   <DefaultLayout>
     <!-- Hero Header -->
-    <section class="bg-gradient-to-br from-purple-600 to-blue-600 text-white py-12 sm:py-16">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Psikologi Pendidikan</h1>
-        <p class="text-lg sm:text-xl text-purple-100 mb-4 lg:mb-6">
+    <section class="relative overflow-hidden bg-primary-800 text-white py-16 sm:py-20">
+      <div class="pointer-events-none absolute -top-16 -right-10 w-80 h-80 rounded-full bg-primary-700/50" aria-hidden="true"></div>
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.25rem] font-semibold mb-4 leading-tight">Psikologi Pendidikan</h1>
+        <p class="text-lg sm:text-xl text-accent-300 mb-4 lg:mb-6 font-medium">
           Membantu Siswa Menemukan Jurusan yang Tepat
         </p>
-        <div class="space-y-4 text-purple-50 leading-relaxed">
+        <div class="space-y-4 text-primary-100 leading-relaxed">
           <p class="text-base lg:text-lg">
             Layanan psikotes pendidikan dari Ordinat Cakrawala dirancang untuk memberikan pemetaan potensi siswa secara komprehensif. Kami membantu siswa SMP dan SMA mengenali kemampuan intelektual, bakat, minat, kepribadian, hingga gaya belajar yang paling cocok.
           </p>
@@ -126,26 +120,25 @@ const iconPaths: Record<string, string> = {
     </section>
 
     <!-- Test Types -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+    <section class="py-14 sm:py-16 lg:py-24 bg-paper">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-8 lg:mb-12">
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        <div class="max-w-2xl mb-10 lg:mb-12">
+          <span class="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">Instrumen</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold text-ink leading-tight mt-3">
             Jenis Tes yang Dilakukan
           </h2>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
-          <div v-for="(group, index) in groups" :key="index" class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
-            <div class="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mb-4 lg:mb-6">
-              <svg class="w-6 h-6 lg:w-7 lg:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="iconPaths[group.icon]" />
-              </svg>
+        <div class="grid md:grid-cols-2 gap-5 lg:gap-6">
+          <div v-for="(group, index) in groups" :key="index" class="bg-white rounded-2xl p-6 lg:p-8 border border-paper-300 hover:border-primary-300 hover:shadow-lg transition-all duration-300">
+            <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-xl flex items-center justify-center mb-4 lg:mb-6 bg-primary-100 text-primary-700 border border-primary-200">
+              <Icon :name="group.icon" class="w-6 h-6 lg:w-7 lg:h-7" />
             </div>
-            <h3 class="text-lg lg:text-xl font-bold text-gray-900 mb-3">{{ group.title }}</h3>
-            <p class="text-sm lg:text-base text-gray-700 mb-4">{{ group.description }}</p>
+            <h3 class="text-lg lg:text-xl font-semibold text-ink mb-3">{{ group.title }}</h3>
+            <p class="text-sm lg:text-base text-ink-soft mb-4">{{ group.description }}</p>
             <ul class="space-y-2">
-              <li v-for="(item, idx) in group.items" :key="idx" class="flex items-center gap-2 text-xs lg:text-sm text-gray-700">
-                <span class="text-purple-600 font-bold flex-shrink-0">•</span>
+              <li v-for="(item, idx) in group.items" :key="idx" class="flex items-start gap-2 text-xs lg:text-sm text-ink-soft">
+                <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary-400"></span>
                 <span>{{ item }}</span>
               </li>
             </ul>
@@ -155,26 +148,24 @@ const iconPaths: Record<string, string> = {
     </section>
 
     <!-- Goals Section -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-purple-50/30">
+    <section class="py-14 sm:py-16 lg:py-24 bg-primary-50/40 border-y border-paper-300">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-12">
+        <div class="bg-white rounded-3xl border border-paper-300 p-6 sm:p-8 lg:p-12">
           <div class="flex items-center gap-4 mb-6 lg:mb-8">
-            <div class="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-7 h-7 lg:w-8 lg:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="iconPaths.target" />
-              </svg>
+            <div class="w-14 h-14 lg:w-16 lg:h-16 rounded-2xl flex items-center justify-center flex-shrink-0 bg-primary-100 text-primary-700 border border-primary-200">
+              <Icon name="target" class="w-7 h-7 lg:w-8 lg:h-8" />
             </div>
             <div>
-              <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">Tujuan Psikotes Pendidikan</h2>
+              <h2 class="font-display text-2xl lg:text-3xl font-semibold text-ink">Tujuan Psikotes Pendidikan</h2>
             </div>
           </div>
 
-          <div class="grid gap-4 lg:gap-6">
-            <div v-for="(goal, index) in goals" :key="index" class="flex items-center gap-4 bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-4 lg:p-6">
-              <div class="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm lg:text-base flex-shrink-0">
+          <div class="grid gap-3 lg:gap-4">
+            <div v-for="(goal, index) in goals" :key="index" class="flex items-center gap-4 bg-paper rounded-xl p-4 lg:p-5 border border-paper-300">
+              <div class="w-8 h-8 lg:w-10 lg:h-10 bg-primary-700 rounded-full flex items-center justify-center text-white font-display font-semibold text-sm lg:text-base flex-shrink-0">
                 {{ index + 1 }}
               </div>
-              <p class="text-sm lg:text-base text-gray-700 leading-relaxed">{{ goal }}</p>
+              <p class="text-sm lg:text-base text-ink-soft leading-relaxed">{{ goal }}</p>
             </div>
           </div>
         </div>
@@ -182,44 +173,45 @@ const iconPaths: Record<string, string> = {
     </section>
 
     <!-- Pricing Packages -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+    <section class="py-14 sm:py-16 lg:py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-8 lg:mb-12">
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        <div class="max-w-2xl mb-10 lg:mb-12">
+          <span class="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">Harga</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold text-ink leading-tight mt-3 mb-4">
             Paket Layanan
           </h2>
-          <p class="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p class="text-base lg:text-lg text-ink-soft">
             Pilih paket yang sesuai dengan kebutuhan penjurusan dan pengembangan potensi anak Anda.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-          <div v-for="(pkg, index) in packages" :key="index" class="relative bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-6 lg:p-8 shadow-lg border-2 border-transparent hover:border-purple-600 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
-            <div v-if="pkg.badge" class="absolute top-0 right-0 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl rounded-tr-xl">
+        <div class="grid md:grid-cols-3 gap-5 lg:gap-6 max-w-6xl mx-auto">
+          <div v-for="(pkg, index) in packages" :key="index" class="relative bg-paper rounded-2xl p-6 lg:p-8 border-2 border-paper-300 hover:border-primary-500 hover:shadow-lg transition-all duration-300">
+            <div v-if="pkg.badge" class="absolute top-0 right-0 bg-accent-500 text-white text-xs font-bold px-4 py-1 rounded-bl-xl rounded-tr-2xl">
               {{ pkg.badge }}
             </div>
-            
+
             <div class="mb-6">
-              <h3 class="text-lg lg:text-xl font-bold text-gray-900 mb-2">{{ pkg.title }}</h3>
-              <p class="text-sm text-purple-600 font-medium">{{ pkg.level }}</p>
+              <h3 class="text-lg lg:text-xl font-semibold text-ink mb-2">{{ pkg.title }}</h3>
+              <p class="text-sm text-primary-700 font-medium">{{ pkg.level }}</p>
             </div>
 
             <div class="mb-6">
-              <p class="text-xs lg:text-sm text-gray-600 mb-2">Komponen:</p>
-              <p class="text-sm lg:text-base text-gray-700 font-medium">{{ pkg.components }}</p>
+              <p class="text-xs lg:text-sm text-ink-soft mb-2">Komponen:</p>
+              <p class="text-sm lg:text-base text-ink font-medium">{{ pkg.components }}</p>
             </div>
 
-            <div class="pt-6 border-t border-purple-200">
-              <div class="text-3xl lg:text-4xl font-bold text-gray-900 mb-1">
+            <div class="pt-6 border-t border-paper-300">
+              <div class="font-display text-3xl lg:text-4xl font-semibold text-ink mb-1">
                 Rp {{ pkg.price }}
               </div>
-              <p class="text-xs lg:text-sm text-gray-600">per siswa</p>
+              <p class="text-xs lg:text-sm text-ink-soft">per siswa</p>
             </div>
           </div>
         </div>
 
         <div class="mt-8 lg:mt-12 text-center">
-          <p class="text-sm lg:text-base text-gray-600">
+          <p class="text-sm lg:text-base text-ink-soft">
             * Harga dapat disesuaikan untuk pemesanan dalam jumlah besar atau program khusus sekolah.
           </p>
         </div>
@@ -227,18 +219,19 @@ const iconPaths: Record<string, string> = {
     </section>
 
     <!-- CTA -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-purple-600 to-blue-600 text-white">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 lg:mb-6">Konsultasi & Informasi Lebih Lanjut</h2>
-        <p class="text-base sm:text-lg text-purple-100 mb-6 lg:mb-8 max-w-3xl mx-auto">
+    <section class="relative overflow-hidden bg-primary-800 text-white py-14 sm:py-16 lg:py-20">
+      <div class="pointer-events-none absolute -bottom-20 -right-10 w-80 h-80 rounded-full bg-primary-700/50" aria-hidden="true"></div>
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4 lg:mb-6">Konsultasi & Informasi Lebih Lanjut</h2>
+        <p class="text-base sm:text-lg text-primary-100 mb-6 lg:mb-8 max-w-3xl mx-auto">
           Silakan hubungi kami untuk mendiskusikan kebutuhan psikotes penjurusan siswa di sekolah atau untuk anak Anda secara individu. Kami siap membantu merancang program yang tepat.
         </p>
         <RouterLink
           to="/kontak"
-          class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 group"
+          class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-accent-500 text-white font-semibold rounded-full hover:bg-accent-400 transition-all shadow-lg active:scale-[0.98] group"
         >
           Hubungi Kami
-          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
         </RouterLink>

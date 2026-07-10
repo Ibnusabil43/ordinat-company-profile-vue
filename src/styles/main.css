@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CSS Variables */
+/* CSS Variables — design tokens (see DESIGN.md §2) */
 :root {
-  --color-primary: #2563eb;
-  --color-secondary: #7c3aed;
+  --color-primary: #1f4b47;   /* deep teal */
+  --color-secondary: #d9764a; /* warm terracotta accent */
+  --color-paper: #faf6f0;     /* warm off-white surface */
+  --color-ink: #232323;       /* warm near-black text */
+  --color-ink-soft: #6b6560;  /* secondary text */
 }
 
 /* Base Styles - Mobile First */

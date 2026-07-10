@@ -29,3 +29,12 @@ coverage
 
 *.tsbuildinfo
 .vercel
+
+# Claude Code tooling — not part of the shipped project
+.claude/
+.agents/
+skills-lock.json
+
+# Working/planning docs for this design revamp — not shipped project docs
+DESIGN.md
+ROADMAP.md

@@ -10,6 +10,8 @@ declare module 'vue' {
     AboutCompany: typeof import('./components/AboutCompany.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
+    HeroScene3D: typeof import('./components/HeroScene3D.vue')['default']
+    Icon: typeof import('./components/Icon.vue')['default']
     IntroSDM: typeof import('./components/IntroSDM.vue')['default']
     Navigation: typeof import('./components/Navigation.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

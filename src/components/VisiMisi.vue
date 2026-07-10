@@ -3,75 +3,74 @@
 </script>
 
 <template>
-  <section id="visi_misi" class="py-12 sm:py-16 lg:py-20 bg-white">
+  <section id="visi_misi" class="py-14 sm:py-16 lg:py-24 bg-paper">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-8 lg:mb-12">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Visi & Misi</h2>
-        <p class="text-lg sm:text-xl text-blue-600 font-medium">Komitmen Kami untuk Masa Depan yang Lebih Baik</p>
+      <div class="max-w-2xl mb-10 lg:mb-14">
+        <span class="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">Arah &amp; Komitmen</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold text-ink leading-tight mt-3 mb-4">Visi &amp; Misi</h2>
+        <p class="text-lg sm:text-xl text-primary-700 font-medium">Komitmen Kami untuk Masa Depan yang Lebih Baik</p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-6 lg:gap-8">
-        <!-- Vision Card -->
-        <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-10 text-white shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 lg:w-14 lg:h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-6 h-6 lg:w-7 lg:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-            </div>
-            <h3 class="text-2xl lg:text-3xl font-bold">Visi</h3>
+      <div class="grid lg:grid-cols-5 gap-6 lg:gap-8 items-stretch">
+        <!-- Vision — large serif pull-quote statement -->
+        <div class="lg:col-span-2 relative bg-primary-800 text-white rounded-3xl p-8 lg:p-10 overflow-hidden flex flex-col">
+          <div class="pointer-events-none absolute -top-10 -right-8 w-52 h-52 rounded-full bg-primary-700/50" aria-hidden="true"></div>
+          <div class="relative">
+            <span class="text-sm font-semibold uppercase tracking-[0.2em] text-accent-300">Visi</span>
+            <!-- oversized quote mark -->
+            <div class="font-display text-7xl leading-none text-accent-400/70 mt-2 mb-2 select-none" aria-hidden="true">&ldquo;</div>
           </div>
-          <p class="text-base lg:text-lg leading-relaxed">
+          <blockquote class="relative font-display text-xl lg:text-2xl leading-snug font-medium flex-grow">
             Menjadi mitra terpercaya dalam optimalisasi sumber daya manusia, melalui layanan psikologi yang profesional, berbasis riset, dan berdampak positif bagi individu maupun organisasi di seluruh Indonesia.
-          </p>
+          </blockquote>
         </div>
 
-        <!-- Mission Card -->
-        <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-xl border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-6 h-6 lg:w-7 lg:h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                />
-              </svg>
-            </div>
-            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900">Misi</h3>
+        <!-- Mission — checklist -->
+        <div class="lg:col-span-3 bg-white rounded-3xl p-8 lg:p-10 border border-paper-300">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">Misi</span>
+            <span class="h-px flex-grow bg-paper-300"></span>
           </div>
           <ul class="space-y-4">
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 lg:w-6 lg:h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span class="text-gray-700 text-sm lg:text-base">Menyediakan layanan asesmen psikologi yang valid, reliabel, dan berbasis standar profesional</span>
+            <li class="flex items-start gap-3.5">
+              <span class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center">
+                <svg class="w-3 h-3 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-ink-soft text-sm lg:text-base leading-relaxed">Menyediakan layanan asesmen psikologi yang valid, reliabel, dan berbasis standar profesional</span>
             </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 lg:w-6 lg:h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span class="text-gray-700 text-sm lg:text-base">Memberikan konseling dan terapi yang empatik, etis, dan sesuai kebutuhan klien</span>
+            <li class="flex items-start gap-3.5">
+              <span class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center">
+                <svg class="w-3 h-3 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-ink-soft text-sm lg:text-base leading-relaxed">Memberikan konseling dan terapi yang empatik, etis, dan sesuai kebutuhan klien</span>
             </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 lg:w-6 lg:h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span class="text-gray-700 text-sm lg:text-base">Menyelenggarakan pelatihan dan workshop yang aplikatif dan berdampak nyata</span>
+            <li class="flex items-start gap-3.5">
+              <span class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center">
+                <svg class="w-3 h-3 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-ink-soft text-sm lg:text-base leading-relaxed">Menyelenggarakan pelatihan dan workshop yang aplikatif dan berdampak nyata</span>
             </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 lg:w-6 lg:h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span class="text-gray-700 text-sm lg:text-base">Berkolaborasi dengan institusi pendidikan dan perusahaan untuk menciptakan ekosistem SDM yang sehat</span>
+            <li class="flex items-start gap-3.5">
+              <span class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center">
+                <svg class="w-3 h-3 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-ink-soft text-sm lg:text-base leading-relaxed">Berkolaborasi dengan institusi pendidikan dan perusahaan untuk menciptakan ekosistem SDM yang sehat</span>
             </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 lg:w-6 lg:h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span class="text-gray-700 text-sm lg:text-base">Terus mengembangkan kompetensi tim melalui riset dan pelatihan berkelanjutan</span>
+            <li class="flex items-start gap-3.5">
+              <span class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center">
+                <svg class="w-3 h-3 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-ink-soft text-sm lg:text-base leading-relaxed">Terus mengembangkan kompetensi tim melalui riset dan pelatihan berkelanjutan</span>
             </li>
           </ul>
         </div>

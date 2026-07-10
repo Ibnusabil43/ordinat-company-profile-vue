@@ -8,10 +8,11 @@ import VisiMisi from '@/components/VisiMisi.vue'
 <template>
   <DefaultLayout>
     <!-- Page Header -->
-    <section class="bg-gradient-to-br from-blue-600 to-purple-600 text-white py-12 sm:py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Profil Perusahaan</h1>
-        <p class="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
+    <section class="relative overflow-hidden bg-primary-800 text-white py-16 sm:py-20">
+      <div class="pointer-events-none absolute -top-16 -right-10 w-80 h-80 rounded-full bg-primary-700/50" aria-hidden="true"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.25rem] font-semibold mb-4 leading-tight">Profil Perusahaan</h1>
+        <p class="text-lg sm:text-xl text-primary-100 max-w-3xl mx-auto">
           Mengenal Ordinat Cakrawala: Biro Konsultasi Psikologi Berbasis Praktik Profesional
         </p>
       </div>

@@ -13,7 +13,6 @@ interface QuickLink {
   title: string
   description: string
   link: string
-  color: string
   icon?: string
   customIcon?: string
 }
@@ -41,42 +40,27 @@ const quickLinks: QuickLink[] = [
     title: 'Profil Perusahaan',
     description: 'Pelajari lebih lanjut tentang Ordinat Cakrawala, visi, misi, dan nilai-nilai perusahaan kami.',
     link: '/profil',
-    color: 'from-blue-600 to-blue-700',
     icon: 'building'
   },
   {
     title: 'Layanan',
     description: 'Jelajahi layanan psikologi kami yang dirancang untuk sekolah, organisasi, dan individu.',
     link: '/layanan',
-    color: 'from-purple-600 to-purple-700',
     icon: 'briefcase'
   },
   {
     title: 'Unit CPMI',
     description: 'Layanan khusus psikotes bagi Calon Pekerja Migran Indonesia melalui Dimensi Cakrawala.',
     link: '/cpmi',
-    color: 'from-blue-500 to-purple-500',
     customIcon: dimensiLogo
   },
   {
     title: 'Tim Psikolog',
     description: 'Kenali tim psikolog dan tenaga profesional yang mendukung layanan kami.',
     link: '/tim',
-    color: 'from-purple-500 to-blue-500',
-    icon: 'graduation'
+    icon: 'education'
   }
 ]
-
-const getIconComponent = (iconName: string) => {
-  const icons: Record<string, string> = {
-    users: 'M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z',
-    briefcase: 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
-    check: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
-    building: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
-    graduation: 'M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z'
-  }
-  return icons[iconName] || icons.check
-}
 </script>
 
 <template>
@@ -85,67 +69,74 @@ const getIconComponent = (iconName: string) => {
     <Hero />
 
     <!-- Why Choose Us -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+    <section class="py-14 sm:py-16 lg:py-24 bg-paper">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-8 lg:mb-12">
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-            Mengapa Memilih Kami
-          </h2>
-          <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-            Ordinat Cakrawala adalah biro konsultasi psikologi yang mendampingi sekolah, organisasi, dan calon pekerja migran Indonesia dalam mengenali potensi, mengelola tantangan, dan mengembangkan kualitas SDM secara menyeluruh.
-          </p>
-        </div>
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
+          <!-- Left: heading + intro -->
+          <div class="lg:col-span-5">
+            <span class="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">Mengapa Kami</span>
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold text-ink leading-tight mt-3 mb-5">
+              Mengapa Memilih Kami
+            </h2>
+            <p class="text-base lg:text-lg text-ink-soft leading-relaxed">
+              Ordinat Cakrawala adalah biro konsultasi psikologi yang mendampingi sekolah, organisasi, dan calon pekerja migran Indonesia dalam mengenali potensi, mengelola tantangan, dan mengembangkan kualitas SDM secara menyeluruh.
+            </p>
+          </div>
 
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
-          <div
-            v-for="(item, index) in whyChooseUs"
-            :key="index"
-            class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 lg:p-8 text-center shadow-lg hover:shadow-xl transition-all"
-          >
-            <div class="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 hover:scale-110 transition-transform">
-              <svg class="w-7 h-7 lg:w-8 lg:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="getIconComponent(item.icon)" />
-              </svg>
+          <!-- Right: numbered editorial list -->
+          <div class="lg:col-span-7">
+            <div
+              v-for="(item, index) in whyChooseUs"
+              :key="index"
+              class="group flex gap-5 sm:gap-7 py-6 border-t border-paper-300 first:border-t-0 first:pt-0 last:pb-0"
+            >
+              <div class="font-display text-2xl sm:text-3xl font-semibold text-primary-300 group-hover:text-accent-500 transition-colors w-12 flex-shrink-0 tabular-nums">
+                {{ String(index + 1).padStart(2, '0') }}
+              </div>
+              <div>
+                <h3 class="text-lg lg:text-xl font-semibold text-ink mb-1.5">{{ item.title }}</h3>
+                <p class="text-sm lg:text-base text-ink-soft leading-relaxed">{{ item.description }}</p>
+              </div>
             </div>
-            <h3 class="text-lg lg:text-xl font-bold text-gray-900 mb-2 lg:mb-3">{{ item.title }}</h3>
-            <p class="text-sm lg:text-base text-gray-700 leading-relaxed">{{ item.description }}</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Quick Links -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-blue-50/30">
+    <section class="py-14 sm:py-16 lg:py-24 bg-primary-50/40 border-y border-paper-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-8 lg:mb-12">
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+        <div class="max-w-2xl mb-10 lg:mb-14">
+          <span class="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">Navigasi</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold text-ink leading-tight mt-3 mb-4">
             Jelajahi Lebih Lanjut
           </h2>
-          <p class="text-base sm:text-lg text-gray-600">
+          <p class="text-base sm:text-lg text-ink-soft">
             Temukan informasi lengkap tentang layanan dan tim profesional kami
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           <RouterLink
             v-for="(item, index) in quickLinks"
             :key="index"
             :to="item.link"
-            class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 group flex flex-col"
+            class="relative bg-white rounded-2xl p-6 border border-paper-300 hover:border-primary-300 hover:shadow-lg transition-all hover:-translate-y-1 group flex flex-col overflow-hidden"
           >
-            <div v-if="item.customIcon" class="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl flex items-center justify-center mb-4 p-1 group-hover:scale-110 transition-transform border-2 border-purple-200 flex-shrink-0">
+            <!-- top accent rule -->
+            <span class="absolute inset-x-0 top-0 h-1 bg-primary-600 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+
+            <div v-if="item.customIcon" class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-5 p-1.5 bg-accent-50 border border-accent-100 flex-shrink-0">
               <img :src="item.customIcon" alt="Dimensi Cakrawala Logo" class="w-full h-full object-contain" />
             </div>
-            <div v-else :class="`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform flex-shrink-0`">
-              <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="getIconComponent(item.icon || '')" />
-              </svg>
+            <div v-else class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-5 bg-primary-100 text-primary-700 border border-primary-200 group-hover:bg-primary-700 group-hover:text-white transition-colors flex-shrink-0">
+              <Icon :name="item.icon || 'target'" class="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
-            <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2">{{ item.title }}</h3>
-            <p class="text-gray-600 text-xs sm:text-sm mb-4 leading-relaxed flex-grow">{{ item.description }}</p>
-            <div class="flex items-center text-blue-600 font-medium text-xs sm:text-sm">
+            <h3 class="text-base sm:text-lg font-semibold text-ink mb-2">{{ item.title }}</h3>
+            <p class="text-ink-soft text-xs sm:text-sm mb-5 leading-relaxed flex-grow">{{ item.description }}</p>
+            <div class="flex items-center text-accent-600 font-semibold text-xs sm:text-sm">
               Selengkapnya
-              <svg class="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </div>
@@ -155,20 +146,24 @@ const getIconComponent = (iconName: string) => {
     </section>
 
     <!-- CTA Section -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 lg:mb-6">
+    <section class="relative overflow-hidden bg-primary-800 text-white">
+      <!-- subtle organic accent, not a glow blob -->
+      <div class="pointer-events-none absolute -bottom-24 -right-16 w-96 h-96 rounded-full bg-primary-700/50" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -top-20 -left-10 w-72 h-72 rounded-full bg-accent-500/10" aria-hidden="true"></div>
+
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center">
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold mb-5 lg:mb-6 leading-tight">
           Siap Berkolaborasi Bersama Kami?
         </h2>
-        <p class="text-base sm:text-lg text-blue-100 mb-6 lg:mb-8 max-w-3xl mx-auto">
+        <p class="text-base sm:text-lg text-primary-100 mb-8 lg:mb-10 max-w-3xl mx-auto leading-relaxed">
           Hubungi kami untuk konsultasi lebih lanjut mengenai psikotes sekolah, asesmen karyawan, program CPMI, maupun kebutuhan konsultasi lainnya.
         </p>
         <RouterLink
           to="/kontak"
-          class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 group"
+          class="inline-flex items-center gap-2 px-7 sm:px-8 py-3.5 sm:py-4 bg-accent-500 text-white font-semibold rounded-full hover:bg-accent-400 transition-all shadow-lg shadow-accent-900/20 hover:shadow-xl active:scale-[0.98] group"
         >
           Hubungi Kami
-          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
         </RouterLink>
